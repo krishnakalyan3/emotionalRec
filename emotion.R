@@ -1,0 +1,20 @@
+# Read in the emotional Lexicon
+emotions = read.csv("emotionlex.csv")
+
+# Exract emotions keywords from data
+anger = subset(emotions,AffectCategory=="anger" & AssociationFlag==1)
+anger = unlist(anger$TargetWord)
+anticipation = subset(emotions,AffectCategory=="anticipation" & AssociationFlag==1)
+anticipation = unlist(anticipation$TargetWord)
+disgust = subset(emotions,AffectCategory=="disgust" & AssociationFlag==1)
+disgust = unlist(disgust$TargetWord)
+fear = subset(emotions,AffectCategory=="fear" & AssociationFlag==1)
+fear = unlist(fear$TargetWord)
+joy = subset(emotions,AffectCategory=="joy" & AssociationFlag==1)
+joy = unlist(joy$TargetWord)
+sadness = subset(emotions,AffectCategory=="sadness" & AssociationFlag==1)
+sadness = unlist(sadness$TargetWord)
+surprise = subset(emotions,AffectCategory=="surprise" & AssociationFlag==1)
+surprise = unlist(surprise$TargetWord)
+trust = subset(emotions,AffectCategory=="trust" & AssociationFlag==1)
+trust = unlist(trust$TargetWord)
